@@ -3,6 +3,7 @@
 var fs   = require('fs'),
     path = require('path'),
     mkdirp = require('mkdirp'),
+    takesCb = require('takes-callback'),
     exec = require('child_process').exec;
 
 var $home = process.env.HOME;
@@ -30,7 +31,24 @@ fs.exists(modulePath, function (result) {
 });
 
 function run () {
-  console.log(require(getMain()).apply(null, args));
+  var mainFn = require(getMain());
+  if (takesCb(mainFn)) {
+    runAsync(mainFn);
+  } else {
+    console.log(mainFn.apply(null, args));
+  }
+}
+
+function runAsync (fn) {
+  args.push(function (err, res) {
+    if (err) {
+      console.log('Error:');
+      console.log(err);
+    } else if (res) {
+      console.log(res);
+    }
+  });
+  var res = fn.apply(null, args);
 }
 
 function makeNpmInstallPath (cb) {

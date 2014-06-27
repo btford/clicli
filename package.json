@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/btford/clicli",
   "dependencies": {
-    "mkdirp": "^0.5.0"
+    "mkdirp": "^0.5.0",
+    "takes-callback": "0.0.0"
   }
 }
