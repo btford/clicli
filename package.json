@@ -1,0 +1,31 @@
+{
+  "name": "clicli",
+  "version": "0.0.0",
+  "description": "makes literally any node module into a CLI tool",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "cli": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/btford/clicli.git"
+  },
+  "keywords": [
+    "cli",
+    "tool",
+    "meta",
+    "post-structuralism"
+  ],
+  "author": "Brian Ford <btford@umich.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/btford/clicli/issues"
+  },
+  "homepage": "https://github.com/btford/clicli",
+  "dependencies": {
+    "mkdirp": "^0.5.0"
+  }
+}
