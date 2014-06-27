@@ -1,6 +1,6 @@
 {
   "name": "clicli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "makes literally any node module into a CLI tool",
   "main": "cli.js",
   "scripts": {
