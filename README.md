@@ -2,7 +2,7 @@
 
 makes _literally any node module\*_ into a CLI tool
 
-\*some node modules
+\*ok _not all_ node modules
 
 ## install
 
